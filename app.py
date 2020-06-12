@@ -19,8 +19,8 @@ import time
 
 
 cities_list = list(pd.read_csv('city_INUS.csv')['cities'])
-IN_cities_list = cities_list[0:134]
-US_cities_list = cities_list[134:224]
+IN_cities_list = cities_list[0:135]
+US_cities_list = cities_list[135:225]
 
 IN_data = pd.read_excel('IN_weather2.xlsx', sheet_name = None)  # Ordered dictionary
 US_data = pd.read_excel('US_weather3.xlsx', sheet_name = None)
