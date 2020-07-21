@@ -306,6 +306,7 @@ def update_output2(n_clicks, cityA_input):
 
         result = 'Sorry your input city is not in the database but the nearest city is {} in {} miles away.\n \
                   City with the most similar weather with {} is {}'.format(city_near, min_distance, city_near, cityB_result)
+        cityA = city_near
     
     
     # Map 
