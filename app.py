@@ -289,6 +289,9 @@ def update_output2(n_clicks, cityA_input):
     
     # Result city
     cityA = str(cityA_input)
+    cityA = cityA.capitalize()
+    if ',' in cityA:
+        cityA = cityA.split(',')[0].strip() + ', ' + cityA.split(',')[1].strip().uppercase()
     if cityA in IN_cities_list:
         cityA_data = IN_data[cityA]
         cityB_result = IN_US_result[IN_US_result['IN_cities'].str.contains(cityA)].iloc[0,1]
