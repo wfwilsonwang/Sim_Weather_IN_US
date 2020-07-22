@@ -299,11 +299,11 @@ def update_output2(n_clicks, cityA_input):
     if cityA in IN_cities_list:
         cityA_data = IN_data[cityA]
         cityB_result = IN_US_result[IN_US_result['IN_cities'].str.contains(cityA)].iloc[0,1]
-        result = 'City with the most similar weather with {} is {}'.format(cityA_input, cityB_result)
+        result = 'City with the most similar weather with {} is {}'.format(cityA, cityB_result)
     elif cityA in US_cities_list:
         cityA_data = US_data[cityA]
         cityB_result = US_IN_result[US_IN_result['US_cities'].str.contains(cityA)].iloc[0,1]
-        result = 'City with the most similar weather with {} is {}'.format(cityA_input, cityB_result)
+        result = 'City with the most similar weather with {} is {}'.format(cityA, cityB_result)
     else: 
         cityA_data, countryA, min_distance, city_near = findcity(cityA)
         if city_near in IN_cities_list:
